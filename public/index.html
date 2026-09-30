@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tinkora | Campus tech support</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="brand">
+        <img src="/tinkora-logo.png" alt="Tinkora" />
+        <div>
+          <p class="eyebrow">CAMPUS TECH SUPPORT</p>
+          <h1>Tinkora</h1>
+          <p>Small fixes, smoother classes.</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <div>
+          <p class="case-label">NEW CASE</p>
+          <h2>What needs fixing?</h2>
+          <p class="muted">Describe the classroom technology problem. Support staff will pick it up.</p>
+        </div>
+        <form id="ticket-form">
+          <label for="title">Problem</label>
+          <div class="form-row">
+            <input id="title" required placeholder="e.g. Projector is showing a blue screen" />
+            <button type="submit">Send report</button>
+          </div>
+          <p id="message" class="message" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="panel">
+        <div class="list-heading">
+          <div>
+            <p class="case-label">LIVE CASEBOARD</p>
+            <h2>Current reports</h2>
+          </div>
+          <button id="refresh" class="secondary" type="button">Refresh</button>
+        </div>
+        <ul id="ticket-list" class="ticket-list"></ul>
+      </section>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
